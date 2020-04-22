@@ -1,0 +1,118 @@
+
+
+.block-1 {
+    text-align: center;
+    height: 20rem; 
+}
+
+#h-image {
+    width: 100%;
+    clip-path: ellipse(85% 40% at 50% 30%);
+    z-index: 1;
+    filter: opacity(65%);
+}
+
+
+#title-h1 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 4rem;
+    color: color(secondary);
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    margin-left: 5.5rem;
+    margin-top: 1.7rem;
+    text-shadow: white 2px 2px;
+    @include tablet {
+        font-size: 8rem;
+        margin-top: 6.5%;
+        margin-left: 13.25%;
+         }
+    @include desktop {
+        font-size: 16rem;
+         margin-top: 7%;
+        margin-left: 10.5%;
+        animation: fadein 4s;
+        }
+       }
+    
+
+       @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      
+
+
+    #title-h2 {
+        font-family: 'Aclonica', sans-serif;
+        font-size: 1.5rem;
+        color: color(secondary);
+        text-align: center;
+        z-index: 2;
+        position: absolute;
+        text-transform: uppercase;
+        margin-left: 3.25rem;
+        margin-top: 1rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        @include tablet {
+            font-size: 3rem;
+            margin-top: 4%;
+            margin-left: 8.5%;
+          }
+        
+        @include desktop {
+            font-size: 6rem;
+            margin-top: 5%;
+            margin-left: 6.5%;
+            animation: fadein 4s;
+          }
+        }
+
+
+
+
+      /*   @include desktop {
+            font-size: 6rem;
+            margin-top: 5%;
+            margin-left: 6.5%;
+            }
+        @include tablet {
+            font-size: 3rem;
+            margin-top: 4%;
+            margin-left: 8.5%;
+            }  */
+
+    
+
+   /*  #title {
+        animation: slideMe 1s ease-in;
+        @include desktop {
+           
+            }
+    }
+@keyframes slideMe{
+    0%{
+        transform: skewX(53deg) translateX(-500px);
+        opacity: 0;
+    }
+    60%{
+        transform: translateX(0px);
+    }
+    62%{
+        transform: skewX(0deg) translateX(30px);
+    }
+    70%{
+        transform: skew(-20deg);
+        opacity: 1;
+    }
+    80%{
+        transform: skew(0deg) translate(0);
+    }
+    90%{
+        transform: skew(-5deg);
+    }
+    100%{
+        transform: skew(0deg);
+    } */

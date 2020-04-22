@@ -1,0 +1,54 @@
+$colors: (
+  primary: #750b0b,
+  primary-variant: #ff6b6b,
+  secondary: rgb(73, 32, 8),
+  secondary-variant: #ffffff,
+  background: #a5a5a5,
+);
+
+
+$tablet: 600px;
+$laptop: 1100px;
+$desktop: 1100px;
+
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+} 
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin s-image {
+  z-index: 1;
+  height: 12rem;
+  margin: 3rem;
+  flex-direction: row;
+  border-style: solid;
+  border-width: .5rem;
+  border-color: color(secondary);
+  transition: all .3s;
+  @include tablet {
+     height: 18rem;
+     border-width: .75rem;
+     margin: 1.5rem;
+       }
+       @include desktop {
+           height: 30rem;
+           border-width: 1rem;
+           margin: 3rem;
+           }
+}
